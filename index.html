@@ -6,11 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -20,44 +16,87 @@
     <div class="container">
       <div class="title-container">
         <div class="title-dad">
+          <img src="img/odin-lined.png" alt="odin-logo" class="logo-title" />
           <h1 class="title-h1 pacifico-regular">Form</h1>
         </div>
 
         <p class="img-author roboto-font">Photo by Emmanuel Codden on pexel</p>
       </div>
+
       <div class="form-container">
-        <div class="title-form-container">
+        <div class="title-form-container internal-padding">
           <h2 class="roboto-font title-form">
-            Thi is just for practice, my first form with The Odin Project
+            This is just for practice, my first form with The Odin Project
           </h2>
           <h3 class="roboto-font sub-title-form">Be kind, ok?</h3>
         </div>
         <div class="main-form-container">
           <form action="">
-            <label for="first-name">first name</label><br />
-            <input type="text" id="first-name" name="first-name" /><br />
-
-            <label for="last-name">last name</label><br />
-            <input type="text" id="last-name" name="last-name" /><br />
-
-            <label for="email">email</label><br />
-            <input type="email" id="email" /><br />
-
-            <label for="phone-number">phone number</label><br />
-            <input type="number" id="phone-number" name="phone-number" /><br />
-
-            <label for="pwd">password</label><br />
-            <input type="password" id="pwd" name="pwd" /><br />
-
-            <label for="confirm-pwd">confirm password</label><br />
-            <input type="password" id="confirm-pwd" name="confirm-pwd" /><br />
-
-            <button type="submit">create account</button>
+            <div class="inputs-container internal-padding">
+              <h2 class="internal-title-form">Let's do this!</h2>
+              <div class="input-group">
+                <label for="first-name" class="label-form roboto-font"
+                  >first name</label
+                >
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="input-group">
+                <label for="last-name" class="label-form roboto-font"
+                  >last name</label
+                >
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+              <div class="input-group">
+                <label for="email" class="label-form roboto-font">email</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="input-group">
+                <label for="phone-number" class="label-form roboto-font"
+                  >phone number</label
+                >
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  pattern="[0-9]{10}"
+                  title="Enter a valid (10) digit phone number"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="pwd" class="label-form roboto-font">password</label>
+                <input
+                  type="password"
+                  id="pwd"
+                  name="pwd"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div class="input-group">
+                <label for="confirm-pwd" class="label-form roboto-font"
+                  >confirm password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-pwd"
+                  name="confirm-pwd"
+                  required
+                  minlength="8"
+                />
+              </div>
+            </div>
+            <div class="internal-padding">
+              <button type="submit" class="submit-button">
+                create account
+              </button>
+            </div>
           </form>
-
-          <div class="account">
-            <p>already have an account? <a href="#">log in</a></p>
-          </div>
+        </div>
+        <div class="internal-padding">
+          <p class="account">
+            already have an account? <a href="#" class="log-in">log in</a>
+          </p>
         </div>
       </div>
     </div>

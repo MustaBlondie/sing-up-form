@@ -10,10 +10,12 @@
   font-style: normal;
 }
 .roboto-font {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
+    "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 }
 
 /* END FONTS */
@@ -21,16 +23,16 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: fit-content;
-  display: flex;
-  height: 100vh;
-  width: 1080px;
+  width: 800px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
 }
 .title-container {
   background-image: url(/img/title-background.jpg);
   background-size: cover;
   background-position: center;
-  width: 50%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -44,10 +46,16 @@
   width: 100%;
   padding: 10px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .title-h1 {
   font-size: 32px;
   color: aliceblue;
+}
+.logo-title {
+  width: 50px;
 }
 
 .img-author {
@@ -60,8 +68,93 @@
 }
 
 .form-container {
-  background-color: rgba(200, 183, 143, 0.535);
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #efe8ca;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+.internal-padding {
+  padding-left: 30px;
+  padding-right: 100px;
 }
 .title-form {
   font-size: 20px;
+}
+
+.main-form-container {
+  padding-bottom: 20px;
+}
+
+.inputs-container {
+  background-color: #cfc690;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+
+  box-shadow: 0px 6px 8px -2px rgba(0, 0, 0, 0.24);
+}
+.internal-title-form {
+  grid-row: 1;
+  grid-column: 1/ 3;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-form {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.account::first-letter {
+  text-transform: capitalize;
+}
+.account {
+  font-family: "Roboto Flex", sans-serif;
+}
+.log-in {
+  text-decoration: none;
+  color: #2e2209;
+  font-weight: bold;
+}
+
+.submit-button::first-letter {
+  text-transform: capitalize;
+}
+.submit-button {
+  margin: 10px 0;
+  padding: 8px 25px;
+  background-color: #2e2209;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid #8d8c88;
+  width: 100%;
+  max-width: 200px;
+  padding: 1px 2px;
+  outline: none;
+}
+input:focus {
+  border: 1px solid #12c3ef;
+}
+
+#pwd:invalid,
+#confirm-pwd:invalid {
+  border: 1px solid #ee0808;
 }
